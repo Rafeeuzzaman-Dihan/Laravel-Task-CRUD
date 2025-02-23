@@ -6,17 +6,12 @@
 </head>
 <body>
     <h1>Available Players</h1>
-    <ul>
+
+    @foreach ($players as $player)
         <li>
-            <a href="/players/{{ $players[0]["id"] }}">
-                {{ $players[0]["name"] }}
-            </a>
+            <p>{{ $player['name'] }}</p>
+            <a href="players/{{ $player['id'] }}">Show Details</a>
         </li>
-        <li>
-            <a href="/players/{{ $players[1]["id"] }}">
-                {{ $players[1]["name"] }}
-            </a>
-        </li>
-    </ul>
+    @endforeach
 </body>
 </html>

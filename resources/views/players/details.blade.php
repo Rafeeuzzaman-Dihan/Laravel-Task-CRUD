@@ -5,6 +5,6 @@
     <title>VFCA</title>
 </head>
 <body>
-    <h3>Players ID - {{ $id }}</h3>
+    <h3>Player ID - {{ $id }}</h3>
 </body>
 </html>
