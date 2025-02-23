@@ -4,8 +4,9 @@
 <ul>
     @foreach ($players as $player)
         <li>
-            <p>{{ $player['name'] }}</p>
-            <a href="players/{{ $player['id'] }}">Show Details</a>
+        <x-card href="/players/{{ $player['id'] }}" :highlight="$player['level'] > 80">
+           <h3>{{ $player['name'] }}</h3>
+        </x-card>
         </li>
     @endforeach
 </ul>
