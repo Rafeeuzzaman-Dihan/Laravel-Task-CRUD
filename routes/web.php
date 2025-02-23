@@ -1,20 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PlayersController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/players', function(){
-
-    $players = [
-        ["name" => "Cristiano Ronaldo", "position" => "LW", "level" => "90", "id" => "1"],
-        ["name" => "Lionel Messi", "position" => "CAM", "level" => "80", "id" => "2"],
-    ];
-
-    return view('players.index', ["players" => $players]);
-});
+Route::get('/players', [PlayersController::class, 'index']);
 
 Route::get('/players/add', function () {
     return view('players.add');
