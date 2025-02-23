@@ -6,7 +6,7 @@
 
     <div class="flex justify-between items-center">
         <span class="text-lg font-semibold text-gray-800">{{ $slot }}</span>
-        <a {{ $attributes }} class="ml-4 inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300">
+        <a {{ $attributes }} class="ml-4 inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-800 transition duration-300">
             View Details
         </a>
     </div>
