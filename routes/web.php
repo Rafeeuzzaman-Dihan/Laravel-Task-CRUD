@@ -13,5 +13,10 @@ Route::get('/players', function(){
         ["name" => "Lionel Messi", "position" => "CAM", "id" => "2"],
     ];
 
-    return view('players.players', ["players" => $players]);
+    return view('players.index', ["players" => $players]);
+});
+
+Route::get('/players/{id}', function($id){
+
+    return view('players.details', ["id" => $id]);
 });

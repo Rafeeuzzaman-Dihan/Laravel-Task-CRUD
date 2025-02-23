@@ -8,12 +8,12 @@
     <h1>Available Players</h1>
     <ul>
         <li>
-            <a href="">
+            <a href="/players/{{ $players[0]["id"] }}">
                 {{ $players[0]["name"] }}
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="/players/{{ $players[1]["id"] }}">
                 {{ $players[1]["name"] }}
             </a>
         </li>
