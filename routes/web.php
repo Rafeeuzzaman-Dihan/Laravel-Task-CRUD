@@ -16,6 +16,10 @@ Route::get('/players', function(){
     return view('players.index', ["players" => $players]);
 });
 
+Route::get('/players/add', function () {
+    return view('players.add');
+});
+
 Route::get('/players/{id}', function($id){
 
     return view('players.details', ["id" => $id]);
