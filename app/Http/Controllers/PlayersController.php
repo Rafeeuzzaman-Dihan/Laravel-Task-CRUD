@@ -10,7 +10,7 @@ class PlayersController extends Controller
     public function index(){
         // route --> /players/
 
-        $players = VFCA::orderby('created_at', 'desc')->get();
+        $players = VFCA::orderby('created_at', 'asc')->get();
         return view('players.index', ['players' => $players]);
     }
     public function details(){
