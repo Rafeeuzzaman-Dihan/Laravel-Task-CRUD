@@ -7,5 +7,11 @@ Route::get('/', function () {
 });
 
 Route::get('/players', function(){
-    return view('players.players');
+
+    $players = [
+        ["name" => "Cristiano Ronaldo", "position" => "LW", "id" => "1"],
+        ["name" => "Lionel Messi", "position" => "CAM", "id" => "2"],
+    ];
+
+    return view('players.players', ["players" => $players]);
 });

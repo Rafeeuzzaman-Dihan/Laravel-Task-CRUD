@@ -7,7 +7,16 @@
 <body>
     <h1>Available Players</h1>
     <ul>
-        <li>Cristiano Ronaldo</li>
+        <li>
+            <a href="">
+                {{ $players[0]["name"] }}
+            </a>
+        </li>
+        <li>
+            <a href="">
+                {{ $players[1]["name"] }}
+            </a>
+        </li>
     </ul>
 </body>
 </html>
