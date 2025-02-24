@@ -8,16 +8,15 @@ use App\Models\VFCA;
 class PlayersController extends Controller
 {
     public function index(){
-        // route --> /players/
-
         $players = VFCA::orderby('created_at', 'asc')->get();
         return view('players.index', ['players' => $players]);
     }
-    public function details(){
-        // route --> /players/{id}
+    public function details($id){
+        $player = VFCA::findorFail($id);
+        return view('players.details', ["player" => $player]);
     }
-    public function create(){
-        // route --> /players/create
+    public function add(){
+        return view('players.add');
     }
     public function store(){
         // route --> /players/ (POST)
