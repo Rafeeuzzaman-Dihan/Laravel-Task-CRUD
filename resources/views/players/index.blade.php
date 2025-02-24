@@ -11,4 +11,5 @@
             @endforeach
         </ul>
     </div>
+    {{ $players->links() }}
 </x-layout>

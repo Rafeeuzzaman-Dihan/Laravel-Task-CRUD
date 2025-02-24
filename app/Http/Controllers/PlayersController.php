@@ -8,7 +8,7 @@ use App\Models\VFCA;
 class PlayersController extends Controller
 {
     public function index(){
-        $players = VFCA::orderby('created_at', 'asc')->get();
+        $players = VFCA::orderby('created_at', 'asc')->paginate(10);
         return view('players.index', ['players' => $players]);
     }
     public function details($id){
