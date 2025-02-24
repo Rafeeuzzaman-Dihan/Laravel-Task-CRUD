@@ -18,6 +18,6 @@
 
     <main class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
         {{ $slot }}
-    </main>    
+    </main>
 </body>
 </html>

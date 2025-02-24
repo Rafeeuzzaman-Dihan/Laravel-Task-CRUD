@@ -1,12 +1,19 @@
 @props(['highlight' => false])
 
-<div @class(['bg-white shadow-lg rounded-lg p-6 transition duration-300', 
-             'ring ring-blue-500' => $highlight, 
-             'border border-gray-200' => !$highlight])>
+<div @class([
+        'bg-gray-900 shadow-lg rounded-lg p-4 transition duration-300 transform hover:shadow-xl',
+        'border-l-4 border-red-600' => $highlight,
+        'border border-gray-600' => !$highlight,
+        'hover:bg-black',
+        'max-w-md mx-auto',
+        'group'
+    ])>
 
-    <div class="flex justify-between items-center">
-        <span class="text-lg font-semibold text-gray-800">{{ $slot }}</span>
-        <a {{ $attributes }} class="ml-4 inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-800 transition duration-300">
+    <div class="flex justify-between items-center transition-transform duration-300">
+        <span class="text-lg font-semibold text-white transition-transform duration-300 transform group-hover:translate-x-2">
+            {{ $slot }}
+        </span>
+        <a {{ $attributes }} class="ml-4 inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 transition duration-300 transform group-hover:-translate-x-2 hover:scale-105">
             View Details
         </a>
     </div>
