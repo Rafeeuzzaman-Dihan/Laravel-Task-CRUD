@@ -10,8 +10,8 @@
         <nav class="container mx-auto flex justify-between items-center p-4">
             <h1 class="text-2xl font-bold text-blue-600">VFCA</h1>
             <div class="flex space-x-4">
-                <a href="/players" class="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300">All Players</a>
-                <a href="/players/add" class="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300">Add Players</a>
+                <a href="{{ route('players.index') }}" class="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300">All Players</a>
+                <a href="{{ route('players.add') }}" class="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300">Add Players</a>
             </div>
         </nav>
     </header>

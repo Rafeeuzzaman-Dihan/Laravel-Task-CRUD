@@ -7,6 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/players', [PlayersController::class, 'index']);
-Route::get('/players/add', [PlayersController::class, 'add']);
-Route::get('/players/{id}', [PlayersController::class, 'details']);
+Route::get('/players', [PlayersController::class, 'index'])->name('players.index');
+Route::get('/players/add', [PlayersController::class, 'add'])->name('players.add');
+Route::get('/players/{id}', [PlayersController::class, 'details'])->name('players.details');
