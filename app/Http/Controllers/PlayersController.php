@@ -29,4 +29,11 @@ class PlayersController extends Controller
 
         return redirect()->route('players.index');
     }
+
+    public function destroy($id) {
+        $player = VFCA::findorFail($id);
+        $player -> delete();
+
+        return redirect() -> route('players.index');
+    }
 }

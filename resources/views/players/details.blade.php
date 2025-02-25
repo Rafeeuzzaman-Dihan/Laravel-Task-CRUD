@@ -12,9 +12,21 @@
         </p>
         <div class="flex justify-center mt-6">
             <a href="/players"
-                class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500">
+                class="ml-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500">
                 Back to all players
             </a>
         </div>
     </div>
+
+    <form action="{{ route("players.destroy", $player->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <div class="flex justify-center">
+            <button type="submit"
+            class="ml-4 inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 transition duration-300 transform group-hover:-translate-x-2 hover:scale-105">
+            Delete
+        </button>
+        </div>
+
+    </form>
 </x-layout>
