@@ -6,6 +6,13 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
+
+    @if (session('success'))
+        <div id="flash" class="p-4 text-center bg-gray-600 text-red-500 font-bold">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <header class="bg-white shadow">
         <nav class="container mx-auto flex justify-between items-center p-4">
             <h1 class="text-2xl font-bold text-blue-600">VFCA</h1>

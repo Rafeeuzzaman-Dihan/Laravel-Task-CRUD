@@ -8,7 +8,7 @@ use App\Models\VFCA;
 class PlayersController extends Controller
 {
     public function index(){
-        $players = VFCA::orderby('created_at', 'desc')->paginate(5);
+        $players = VFCA::orderby('created_at', 'asc')->paginate(5);
         return view('players.index', ['players' => $players]);
     }
     public function details($id){
@@ -27,13 +27,13 @@ class PlayersController extends Controller
 
         VFCA::create($validated);
 
-        return redirect()->route('players.index');
+        return redirect()->route('players.index') -> with('success', 'Player Created');
     }
 
     public function destroy($id) {
         $player = VFCA::findorFail($id);
         $player -> delete();
 
-        return redirect() -> route('players.index');
+        return redirect() -> route('players.index') -> with('success', 'Player Deleted');
     }
 }
